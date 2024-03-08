@@ -15,8 +15,9 @@ export class MorningRoutine {
     const hours = this.clock.now().getHours()
     if (hours === 6) {
       return "Do exercise"
+    } else if (hours === 7) {
+      return "Read and Study"
     }
-
     return "No activity"
   }
 }

@@ -11,13 +11,20 @@ describe("MorningRoutine", () => {
   })
 
   it("displays Do exercise at 06:30", () => {
-    const morningRoutine = createMorningRoutine("2024-03-08T05:30:00.000Z")
+    const morningRoutine = createMorningRoutine("2024-03-08T06:30:00.000Z")
 
     const activity = morningRoutine.whatShouldIDoNow()
 
     expect(activity).toBe("Do exercise")
   })
-})
+  it("displays Read and Study at 7:30", () => {
+    const morningRoutine = createMorningRoutine("2024-03-08T07:30:00.000Z")
+
+    const activity = morningRoutine.whatShouldIDoNow()
+
+    expect(activity).toBe("Read and Study")
+  })
+}) 
 
 function createMorningRoutine(isoTimestamp: string) {
   const today = new Date(isoTimestamp)
