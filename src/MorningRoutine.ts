@@ -17,6 +17,8 @@ export class MorningRoutine {
       return "Do exercise"
     } else if (hours === 7) {
       return "Read and Study"
+    } else if (hours == 8) {
+      return "Have breakfast"
     }
     return "No activity"
   }
